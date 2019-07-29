@@ -6,8 +6,9 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-// 在app.js中引入banner的api 文件
-var apibannerRouter = require('./api/banner');
+// 在app.js中引R入banner的api 文件
+var apibannerouter = require('./api/banner');
+var apiproductrouter = require('./api/product');
 
 var app = express();
 
@@ -33,6 +34,8 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 // 使用banner的api   apibannerRouter
 app.use('/api/banner', apibannerRouter);
+app.use('/api/product', apiproductrouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
