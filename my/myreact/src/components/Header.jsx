@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default  (props) => {
-  console.log("1",props)
+  // console.log("1",props)
   const { label, left, right, onLeftClick, onRightClick } = props
   return (
     <ul>

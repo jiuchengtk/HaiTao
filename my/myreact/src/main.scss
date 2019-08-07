@@ -1,0 +1,155 @@
+@import '@/lib/reset.scss';
+html, body, #root, .container {
+  @include rect(100%, 100%);
+}
+
+.container{
+  @include flexbox();
+  @include flex-direction(column);
+  .am-tabs-default-bar-tab {
+    font-size: 14px;
+  }
+  .slide-slide{
+    li{
+      img {
+        height:1.5rem;
+    }
+  }
+  }
+  .box {
+    @include flex();
+    width:100%;
+    overflow: hidden;
+    @include flexbox();
+    @include flex-direction(column); 
+    .header {
+      @include rect(100%, 0.44rem);
+      @include background-color(rgb(102, 212, 255));
+      
+      ul{
+        @include flexbox();
+        @include rect(100%, 100%); 
+        li{
+          .am-search {
+           width:2.16rem;
+            background-color: rgba(255,255,255,0);
+            margin-top: .08rem;
+            height:.28rem;
+            }
+            .am-search-cancel {
+              font-size: 14px;
+              color: #fff;
+            }
+          @include flexbox();
+          @include flex-direction(column);
+          @include justify-content();
+          @include align-items();
+          &:nth-child(1), &:nth-child(3) {
+            @include rect(50px, 100%);
+          }
+          &:nth-child(2) {
+            @include flex();
+          }
+        }
+      }
+      
+    }
+    .content {
+      @include flex();
+      @include rect(100%, auto);
+      @include overflow();
+      .am-carousel {
+        overflow: hidden;
+      }
+      .am-tabs{
+        @include rect(100%,.43rem);
+        @include font-size(12px);
+      }
+      .tb {
+        @include background-color(#ffffff);
+        ul {
+          @include rect(100%, .8rem);
+          @include flexbox();
+          justify-content:space-around;
+          li{
+            @include flexbox();
+            @include rect(.8rem, .8rem);
+    
+            img{
+              @include rect(.8rem, .8rem);
+            }
+          }
+         }
+      }
+      .th{
+        @include rect(100%, .43rem);
+        @include flexbox();
+        @include justify-content();
+        @include align-items();
+        span{
+          display:block;
+          @include rect(.3rem, .02rem);
+          @include background-color(#000); 
+        }
+        p {
+          font:.14rem/.24rem "";
+          margin:0 .1rem;
+          text-align: center;
+        }
+      }
+      .mz{
+          width:100%;
+          @include flexbox();
+          @include align-items();
+          justify-content:space-around;
+        li{
+          list-style:none;
+          padding:0;
+          margin:0;
+          @include rect(1rem, 1.5rem);
+          img{
+            @include rect(1rem, 1rem); 
+          }
+          p{
+            font:.14rem/.20rem "";
+            width:1rem;
+            text-align: center;
+            font-weight: 700;
+          }
+          b{
+            display:block;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    @include rect(100%, 0.6rem);
+    @include background-color(#efefef);
+    ul {
+      @include rect(100%, 100%);
+      @include flexbox();
+      a {
+        @include flex();
+        @include color(#333);
+        @include rect(auto, 100%);
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content();
+        @include align-items();
+        span {
+          @include font-size(20px);
+        }
+        p {
+          @include font-size(12px);
+        }
+
+        &.active { // li.router-link-active {}
+          @include color(rgb(102, 212, 255));
+        }
+      }
+    }
+  }
+}
+
