@@ -9,17 +9,27 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: () => import('@/views/Home.vue')
+      component: () => import('@/views/home')
     },
     {
       path: '/user',
       name: 'user',
-      component: () => import('@/views/User.vue')
+      component: () => import('@/views/user')
     },
     {
       path: '/pro',
       name: 'pro',
-      component: () => import('@/views/Pro.vue')
+      component: () => import('@/views/pro')
+    },
+    {
+      path: '/sign',
+      name: 'sign',
+      component: () => import('@/views/Sign.vue')
+    },
+    {
+      path: '/res',
+      name: 'res',
+      component: () => import('@/views/Resg.vue')
     }
   ]
 })

@@ -6,6 +6,8 @@
             style="width: 100%">
             <el-table-column
                 prop="images.small"
+                align="center"
+                width = "150"
                 label="图片">
                 <template slot-scope="scope">
                     <el-image 
@@ -17,15 +19,18 @@
             <el-table-column
                 prop="title"
                 label="电影名称"
+                align="center"
                 width="180">
             </el-table-column>
             <el-table-column
                 prop="id"
                 label="id"
+                align="center"
                 width="180">
             </el-table-column>
             <el-table-column
                 prop="year"
+                align="center"
                 label="上映时间">
             </el-table-column>
         </el-table>

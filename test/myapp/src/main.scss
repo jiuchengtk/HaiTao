@@ -1,0 +1,141 @@
+@import '@/lib/reset.scss';
+* { touch-action: pan-y; }
+html, body, #root, .container {
+    @include rect(100%, 100%)
+}
+
+.container {
+    @include flexbox();
+    @include flex-direction(column);
+    .box {
+        @include flex();
+        @include flexbox();
+        @include rect(100%, auto);
+        @include flex-direction(column);
+        .header {
+            @include rect(100%, 0.44rem);
+            @include background-color(#0f0);
+            border-bottom: 1px solid rgba(187,187,187,1);
+        }
+        .content {
+            @include flex();
+            @include flexbox();
+            @include rect(100%, auto);
+            @include overflow(hidden);
+            .list {
+                @include rect(0.8rem, 100%);
+                border-right: 1px solid rgba(187,187,187,1);
+                li {
+                    @include flexbox();
+                    text-align: center;
+                    @include align-items();
+                    @include justify-content();
+                    @include rect(0.8rem, 0.5rem);
+                    span {
+                        font: 0.12rem/1 "";
+                    }
+                }
+            }
+            .pro {
+                width: 100%;
+                height: auto;
+                overflow: scroll;
+                @include flexbox();
+                @include flex-direction(column);
+                .banner {
+                    width: 100%;
+                    height: 1.2rem;
+                    position: relative;
+                    .banners {
+                        left: 3%;
+                        top: 0.1rem;
+                        position: absolute;
+                        @include rect(100%, 100%);
+                        @include justify-content();
+                        @include rect(94%, 1.0rem);
+                        background-color: #0f0;
+                        .am-carousel {
+                            height: 1.0rem;
+                            img {
+                                height: 1.0rem
+                            }
+                        }
+                    }
+                }
+                .pro .am-wingBlank.am-wingBlank {
+                    @include rect(100%, 1.0rem);
+                    margin: 0;
+                    padding: 0;
+                }
+                .shop {
+                    position: relative;
+                    @include rect(100%, auto);
+                    .near {
+                        width: 94%;
+                        p {
+                            width: 100%;
+                        }
+                        span {
+                            border: 0.01rem solid #999;
+                        }
+                    }
+                    .shophead {
+                        left: 3%;
+                        height: 0.3rem;
+                        @include flexbox();
+                        position: absolute;
+                        @include align-items();
+                        @include rect(94%, 0.3rem);
+                        @include justify-content(space-between);
+                        span {
+                            color: #888;
+                            font: 0.20rem/0.3rem "";
+                        }
+                        div {
+                            font:0.12rem/0.3rem "";
+                            color: rgba(147, 147, 147, 1);
+                        }
+                    }
+                    ul {
+                        left: 3%;
+                        top: 0.8rem;
+                        width: 94%;
+                        height: auto;
+                        flex-wrap: wrap;
+                        @include flexbox();
+                        position: absolute;
+                        margin-bottom: 0.1rem;
+                        @include justify-content(space-between);
+                        li{
+                            margin-bottom: 0.1rem;
+                            background-color: #f9f;
+                            @include rect(0.86rem, 1.18rem);
+                            img {
+                                @include rect(100%, 100%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        @include rect(100%, 0.5rem);
+        @include background-color(#999);
+        ul {
+            @include rect(100%, 100%);
+            @include flexbox();
+            a {
+                @include flex();
+                @include rect(auto, 100%);
+                @include flexbox();
+                @include color(#f00);
+                @include justify-content();
+                @include align-items();
+            }
+        }
+    }
+}
+
+
+
